@@ -1,0 +1,117 @@
+info: ::1 - - [13/Jul/2024:04:44:00 +0000] "GET /api/v1/ HTTP/1.1" 200 9 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+info: ::1 - - [13/Jul/2024:04:44:00 +0000] "GET /favicon.ico HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+info: ::1 - - [13/Jul/2024:04:44:18 +0000] "GET /api/v1/users.getdata HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:04:44:28 +0000] "GET /api/v1/users/getdata HTTP/1.1" 400 56 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:04:50:27 +0000] "GET /api/v1/users/getdata HTTP/1.1" 500 129 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:04:52:22 +0000] "GET /api/v1/users/getdata HTTP/1.1" 500 93 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:05:09:21 +0000] "GET /api/v1/users/getdata HTTP/1.1" 500 93 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:10:25 +0000] "POST /api/v1/user HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:10:46 +0000] "GET /api/v1/users HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:12:08 +0000] "POST /api/v1/user HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:15:37 +0000] "POST /api/v1/users HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:16:15 +0000] "POST /api/v1/users/user HTTP/1.1" 201 25 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:16:36 +0000] "GET /api/v1/users/users HTTP/1.1" 200 57 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:17:24 +0000] "POST /api/v1/users/user HTTP/1.1" 400 114 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:18:20 +0000] "GET /api/v1/users HTTP/1.1" 200 2 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:18:33 +0000] "GET /api/v1/user HTTP/1.1" 404 47 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:18:38 +0000] "GET /api/v1/users HTTP/1.1" 200 2 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:44:10 +0000] "GET /api/v1/users HTTP/1.1" 500 55 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:44:16 +0000] "POST /api/v1/users HTTP/1.1" 400 114 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [13/Jul/2024:06:44:23 +0000] "POST /api/v1/users HTTP/1.1" 400 26 "-" "PostmanRuntime/7.40.0"
+
+error: uncaughtException: HttpStatus is not defined
+ReferenceError: HttpStatus is not defined
+    at _callee$ (D:\Node_WorkSpace\fundooNotes\src\controllers\/user.controller.js:5:16)
+    at tryCatch (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:45:16)
+    at Generator.<anonymous> (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:133:17)
+    at Generator.next (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:74:21)
+    at asyncGeneratorStep (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5) {"date":"Sat Jul 13 2024 12:14:56 GMT+0530 (India Standard Time)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":8002.218},"process":{"argv":["node","D:\\Node_WorkSpace\\fundooNotes\\src\\index.js"],"cwd":"D:\\Node_WorkSpace\\fundooNotes","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18930028,"external":20860948,"heapTotal":87912448,"heapUsed":53253552,"rss":128299008},"pid":15160,"uid":null,"version":"v18.20.4"},"stack":"ReferenceError: HttpStatus is not defined\n    at _callee$ (D:\\Node_WorkSpace\\fundooNotes\\src\\controllers\\/user.controller.js:5:16)\n    at tryCatch (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:45:16)\n    at Generator.<anonymous> (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:133:17)\n    at Generator.next (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:74:21)\n    at asyncGeneratorStep (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js:3:17)\n    at _next (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js:17:9)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","trace":[{"column":16,"file":"D:\\Node_WorkSpace\\fundooNotes\\src\\controllers\\/user.controller.js","function":"_callee$","line":5,"method":null,"native":false},{"column":16,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":"tryCatch","line":45,"method":null,"native":false},{"column":17,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":null,"line":133,"method":null,"native":false},{"column":21,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":"Generator.next","line":74,"method":"next","native":false},{"column":17,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js","function":"asyncGeneratorStep","line":3,"method":null,"native":false},{"column":9,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js","function":"_next","line":17,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":95,"method":null,"native":false}]}
+error: uncaughtException: E11000 duplicate key error collection: myDB.users index: email_1 dup key: { email: "ria@gmail.com" }
+MongoError: E11000 duplicate key error collection: myDB.users index: email_1 dup key: { email: "ria@gmail.com" }
+    at Function.create (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\core\error.js:59:12)
+    at toError (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\utils.js:130:22)
+    at D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\core\sdam\topology.js:961:24)
+    at D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\cmap\connection_pool.js:352:13
+    at handleOperationResult (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\core\sdam\server.js:567:5)
+    at MessageStream.messageHandler (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\cmap\connection.js:308:5)
+    at MessageStream.emit (node:events:517:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (D:\Node_WorkSpace\fundooNotes\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:337:10)
+    at Socket.ondata (node:internal/streams/readable:809:22)
+    at Socket.emit (node:events:517:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Socket.Readable.push (node:internal/streams/readable:278:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {"date":"Sat Jul 13 2024 12:16:32 GMT+0530 (India Standard Time)","error":{"code":11000,"driver":true,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"ria@gmail.com"},"name":"MongoError"},"exception":true,"os":{"loadavg":[0,0,0],"uptime":8098.046},"process":{"argv":["node","D:\\Node_WorkSpace\\fundooNotes\\src\\index.js"],"cwd":"D:\\Node_WorkSpace\\fundooNotes","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18437724,"external":20366028,"heapTotal":49770496,"heapUsed":45982720,"rss":90370048},"pid":2936,"uid":null,"version":"v18.20.4"},"stack":"MongoError: E11000 duplicate key error collection: myDB.users index: email_1 dup key: { email: \"ria@gmail.com\" }\n    at Function.create (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\error.js:59:12)\n    at toError (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\utils.js:130:22)\n    at D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\operations\\common_functions.js:258:39\n    at handler (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\sdam\\topology.js:961:24)\n    at D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js:352:13\n    at handleOperationResult (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\sdam\\server.js:567:5)\n    at MessageStream.messageHandler (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\connection.js:308:5)\n    at MessageStream.emit (node:events:517:28)\n    at MessageStream.emit (node:domain:489:12)\n    at processIncomingData (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:144:12)\n    at MessageStream._write (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:42:5)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at MessageStream.Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:809:22)\n    at Socket.emit (node:events:517:28)\n    at Socket.emit (node:domain:489:12)\n    at addChunk (node:internal/streams/readable:368:12)\n    at readableAddChunk (node:internal/streams/readable:341:9)\n    at Socket.Readable.push (node:internal/streams/readable:278:10)\n    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)","trace":[{"column":12,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\error.js","function":"Function.create","line":59,"method":"create","native":false},{"column":22,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\utils.js","function":"toError","line":130,"method":null,"native":false},{"column":39,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\operations\\common_functions.js","function":null,"line":258,"method":null,"native":false},{"column":24,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\sdam\\topology.js","function":"handler","line":961,"method":null,"native":false},{"column":13,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js","function":null,"line":352,"method":null,"native":false},{"column":5,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\core\\sdam\\server.js","function":"handleOperationResult","line":567,"method":null,"native":false},{"column":5,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\connection.js","function":"MessageStream.messageHandler","line":308,"method":"messageHandler","native":false},{"column":28,"file":"node:events","function":"MessageStream.emit","line":517,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"MessageStream.emit","line":489,"method":"emit","native":false},{"column":12,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\message_stream.js","function":"processIncomingData","line":144,"method":null,"native":false},{"column":5,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\mongodb\\lib\\cmap\\message_stream.js","function":"MessageStream._write","line":42,"method":"_write","native":false},{"column":12,"file":"node:internal/streams/writable","function":"writeOrBuffer","line":392,"method":null,"native":false},{"column":10,"file":"node:internal/streams/writable","function":"_write","line":333,"method":null,"native":false},{"column":10,"file":"node:internal/streams/writable","function":"MessageStream.Writable.write","line":337,"method":"write","native":false},{"column":22,"file":"node:internal/streams/readable","function":"Socket.ondata","line":809,"method":"ondata","native":false},{"column":28,"file":"node:events","function":"Socket.emit","line":517,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"Socket.emit","line":489,"method":"emit","native":false},{"column":12,"file":"node:internal/streams/readable","function":"addChunk","line":368,"method":null,"native":false},{"column":9,"file":"node:internal/streams/readable","function":"readableAddChunk","line":341,"method":null,"native":false},{"column":10,"file":"node:internal/streams/readable","function":"Socket.Readable.push","line":278,"method":"push","native":false},{"column":23,"file":"node:internal/stream_base_commons","function":"TCP.onStreamRead","line":190,"method":"onStreamRead","native":false}]}
+info: ::1 - - [13/Jul/2024:06:49:16 +0000] "POST /api/v1/users HTTP/1.1" 201 262 "-" "PostmanRuntime/7.40.0"
+
+error: uncaughtException: HttpStatus is not defined
+ReferenceError: HttpStatus is not defined
+    at _callee2$ (D:\Node_WorkSpace\fundooNotes\src\controllers\/user.controller.js:29:16)
+    at tryCatch (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:45:16)
+    at Generator.<anonymous> (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:133:17)
+    at Generator.throw (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\regeneratorRuntime.js:74:21)
+    at asyncGeneratorStep (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _throw (D:\Node_WorkSpace\fundooNotes\node_modules\@babel\runtime\helpers\asyncToGenerator.js:20:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5) {"date":"Mon Jul 15 2024 16:42:56 GMT+0530 (India Standard Time)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":196881.984},"process":{"argv":["node","D:\\Node_WorkSpace\\fundooNotes\\src\\index.js"],"cwd":"D:\\Node_WorkSpace\\fundooNotes","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18298026,"external":20226330,"heapTotal":50294784,"heapUsed":45498192,"rss":89292800},"pid":22488,"uid":null,"version":"v18.20.4"},"stack":"ReferenceError: HttpStatus is not defined\n    at _callee2$ (D:\\Node_WorkSpace\\fundooNotes\\src\\controllers\\/user.controller.js:29:16)\n    at tryCatch (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:45:16)\n    at Generator.<anonymous> (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:133:17)\n    at Generator.throw (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js:74:21)\n    at asyncGeneratorStep (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js:3:17)\n    at _throw (D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js:20:9)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","trace":[{"column":16,"file":"D:\\Node_WorkSpace\\fundooNotes\\src\\controllers\\/user.controller.js","function":"_callee2$","line":29,"method":null,"native":false},{"column":16,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":"tryCatch","line":45,"method":null,"native":false},{"column":17,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":null,"line":133,"method":null,"native":false},{"column":21,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\regeneratorRuntime.js","function":"Generator.throw","line":74,"method":"throw","native":false},{"column":17,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js","function":"asyncGeneratorStep","line":3,"method":null,"native":false},{"column":9,"file":"D:\\Node_WorkSpace\\fundooNotes\\node_modules\\@babel\\runtime\\helpers\\asyncToGenerator.js","function":"_throw","line":20,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":95,"method":null,"native":false}]}
+info: ::1 - - [15/Jul/2024:11:14:14 +0000] "POST /api/v1/users/new HTTP/1.1" 201 269 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:14:33 +0000] "GET /api/v1/users/get HTTP/1.1" 400 66 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:15:43 +0000] "GET /api/v1/users/get HTTP/1.1" 201 262 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:16:18 +0000] "GET /api/v1/users/get HTTP/1.1" 400 49 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:17:15 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:17:37 +0000] "GET /api/v1/users/get HTTP/1.1" 201 260 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:18:58 +0000] "GET /api/v1/users/get HTTP/1.1" 201 260 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:20:48 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:20:57 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:22:39 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:23:01 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:23:41 +0000] "GET /api/v1/users/get HTTP/1.1" 201 260 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:24:05 +0000] "GET /api/v1/users/get HTTP/1.1" 400 49 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:24:41 +0000] "GET /api/v1/users/get HTTP/1.1" 400 49 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:26:10 +0000] "POST /api/v1/users/new HTTP/1.1" 201 264 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:26:45 +0000] "GET /api/v1/users/get HTTP/1.1" 201 257 "-" "PostmanRuntime/7.40.0"
+
+info: ::1 - - [15/Jul/2024:11:26:51 +0000] "GET /api/v1/users/get HTTP/1.1" 400 46 "-" "PostmanRuntime/7.40.0"
+

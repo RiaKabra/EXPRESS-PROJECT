@@ -1,0 +1,44 @@
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:07:17.278Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:07:17.295Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:08:09.104Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:08:09.118Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:09:16.750Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:09:16.769Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:09:32.430Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:09:32.445Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:11:30.132Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:11:30.148Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:14:07.994Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:14:08.010Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:15:38.462Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:15:38.480Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:17:04.523Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:17:04.540Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:18:50.728Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:18:50.754Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:22:32.107Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:22:32.125Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:23:38.628Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:23:38.644Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:24:01.470Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:24:01.488Z"}
+error: 
+    status - 500 
+    message - SyntaxError: Unexpected string in JSON at position 38
+    at JSON.parse (<anonymous>)
+    at parse (D:\Node_WorkSpace\fundooNotes\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\Node_WorkSpace\fundooNotes\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (D:\Node_WorkSpace\fundooNotes\node_modules\raw-body\index.js:238:16)
+    at done (D:\Node_WorkSpace\fundooNotes\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\Node_WorkSpace\fundooNotes\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:517:28)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21) 
+    url - /api/v1/users/get 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2024-07-15T11:24:32.020Z"}
+info: Server started at http://localhost:3000/api/v1/ {"timestamp":"2024-07-15T11:27:05.915Z"}
+info: Connected to the database. {"timestamp":"2024-07-15T11:27:05.931Z"}
