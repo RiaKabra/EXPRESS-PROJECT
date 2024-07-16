@@ -1,5 +1,5 @@
-logs/requests/all.log
-logs/requests/daily/
-logs/server/all.log
-logs/server/error.log
-logs/server/daily/
+node_modules
+.vscode
+.nyc_output
+.env
+logs
