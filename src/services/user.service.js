@@ -1,7 +1,6 @@
 import User from '../models/user.model';
 import bcrypt from 'bcrypt';
-//const bcrypt2 = require('bcrypt');
-//create new user
+import jwt from 'jsonwebtoken';
 export const createUser = async (userDetails) => {
   const saltRounds = 10;
   console.log("Message: User details under User Service", userDetails);
@@ -22,8 +21,9 @@ export const loginUser = async (body)=>
   }
   else{
     if(bcrypt.compare(body.password,login.password))
-      {
-        return login
+      { const { sign} = jwt;
+        const token = sign({"firstname":login.firstname,"email":login.email,"id":login._id}, process.env.secret_key)
+        return token
       }
       else{
         throw new Error("Invalid password");
@@ -31,3 +31,4 @@ export const loginUser = async (body)=>
   }
 }
 
+//, {expiresIn: 300}
