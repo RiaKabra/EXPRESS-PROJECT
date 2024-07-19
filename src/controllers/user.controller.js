@@ -22,7 +22,7 @@ export const loginUser = async (req, res, next) => {
     res.status(HttpStatus.CREATED).json({
       code: HttpStatus.CREATED,
       data: data,
-      message: 'Login successfully'
+      message: 'Login successful'
     });
     console.log(data)
   } catch (error) {
