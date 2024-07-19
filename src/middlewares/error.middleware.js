@@ -1,6 +1,37 @@
 import HttpStatus from 'http-status-codes';
-
+import jwt from 'jsonwebtoken';
 import logger from '../config/logger';
+export function authorize(req, res, next) {
+  const token = req.headers['authorization'];
+  /**
+ * Middleware for blocking unauthorized access.
+ *
+ * @param {Object} req
+ * @param {Object} res
+ * @param {Function} next
+ */
+
+  if (!token) {
+    logger.warn(`Unauthorized access attempt `);
+    return res.status(HttpStatus.UNAUTHORIZED).json({
+      code: HttpStatus.UNAUTHORIZED,
+      message: 'No token provided, authorization denied'
+    });
+  }
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) {
+      logger.warn(`Invalid token provided for access `);
+      return res.status(HttpStatus.UNAUTHORIZED).json({
+        code: HttpStatus.UNAUTHORIZED,
+        message: 'Invalid token, authorization denied'
+      });
+    }
+    
+    req.user = decoded;
+    next();
+  });
+}
 
 /**
  * Error response middleware for 404 not found.
