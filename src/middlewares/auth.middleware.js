@@ -12,18 +12,24 @@ import jwt from 'jsonwebtoken';
 export const userAuth = async (req, res, next) => {
   try {
     let bearerToken = req.header('Authorization');
+    //console.log("Bearer token before split ---->",bearerToken);
     if (!bearerToken)
       throw {
         code: HttpStatus.BAD_REQUEST,
         message: 'Authorization token is required'
       };
     bearerToken = bearerToken.split(' ')[1];
-
-    const { user } = await jwt.verify(bearerToken, process.env.secret_key);
+    //console.log("Bearer token after split ---->",bearerToken);
+    const user  = await jwt.verify(bearerToken, process.env.secret_key);
+    //console.log("After verification payload data",user);
+    req.body.createdBy = user.id;
     //res.locals.user = user;
     //res.locals.token = bearerToken;
     next();
   } catch (error) {
-    next(error);
+    res.status(HttpStatus.UNAUTHORIZED).json({
+      code: HttpStatus.UNAUTHORIZED,
+      message: `${error}`
+    })
   }
 };
