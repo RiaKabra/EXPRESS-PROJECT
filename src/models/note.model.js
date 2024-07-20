@@ -1,28 +1,29 @@
 import { Schema, model } from 'mongoose';
 
 const noteSchema = new Schema(
-  { createdBy:{
-    type: String, 
-  },
-    title:{
-      type: String, 
-      required:true
+  {
+    createdBy: {
+      type: String,
     },
-    description:{
-      type:String,
+    title: {
+      type: String,
+      required: true
     },
-    colour :{
+    description: {
+      type: String,
+    },
+    colour: {
       type: String,
     },
     isArch:
     {
-      type : Boolean,
-      default:false
+      type: Boolean,
+      default: false
     },
     isTrash:
     {
-      type : Boolean,
-      default:false
+      type: Boolean,
+      default: false
     }
 
   },
@@ -32,3 +33,5 @@ const noteSchema = new Schema(
 );
 
 export default model('Note', noteSchema);
+
+
