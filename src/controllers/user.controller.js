@@ -36,3 +36,44 @@ export const loginUser = async (req, res, next) => {
     });
   }
 }
+
+export const forget_pswd = async (req, res) => {
+  try {
+      console.log('Request body:', req.body);
+
+      const token = await UserService.forget_pswd(req.body);
+
+      res.status(HttpStatus.OK).json({
+          code: HttpStatus.OK,
+          message: 'Token generated successfully',
+          data: token,
+      });
+  } catch (error) {
+      console.error('Error occurred:', error.message);
+
+      res.status(HttpStatus.BAD_REQUEST).json({
+          code: HttpStatus.BAD_REQUEST,
+          message: error.message,
+      });
+  }
+};
+
+export const reset_pswd = async (req, res,next) => {
+  try {
+
+      const token = await UserService.reset_pswd(req.body);
+
+      res.status(HttpStatus.OK).json({
+          code: HttpStatus.OK,
+          message: "Password reset successful",
+          data: token,
+      });
+  } catch (error) {
+      console.error('Error occurred:', error.message);
+
+      res.status(HttpStatus.BAD_REQUEST).json({
+          code: HttpStatus.BAD_REQUEST,
+          message: error.message,
+      });
+  }
+};

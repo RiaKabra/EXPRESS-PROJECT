@@ -32,7 +32,15 @@ export const toggleArchiveNote = async (noteId) => {
   if (!note) {
     throw new Error('Note not found');
   }
+  if(note.isTrash!=true)
+  {
   note.isArch = !note.isArch;
+  }
+  else 
+  {
+    note.isArch = false;
+    throw new Error("Trashed note cannot be archived");
+  }
   await note.save();
   return note;
 };
@@ -53,3 +61,4 @@ export const colourUpdate = async(noteid,colour)=>{
   await note.save();
   return note;
 }
+
