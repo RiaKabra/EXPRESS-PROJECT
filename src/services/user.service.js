@@ -1,7 +1,7 @@
 import User from '../models/user.model';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-
+import { mailSender } from '../helper/mail.helper';
 
 export const createUser = async (userDetails) => {
   const saltRounds = 10;
@@ -45,7 +45,7 @@ export const forget_pswd = async (body) => {
   }
   console.log("SECRET KEY in user service -----",process.env.SECRET_KEY_NEW);
   const token = jwt.sign({ email: user.email ,id:user._id}, process.env.SECRET_KEY_NEW);
-
+  await mailSender(user.email,token);
   console.log('Token generated:', token);
 
   return token;
