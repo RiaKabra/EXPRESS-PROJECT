@@ -1,3 +1,4 @@
+import swagger from './swagger/openai.json';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,7 +16,7 @@ import {
 import logger, { logStream } from './config/logger';
 
 import morgan from 'morgan';
-
+const swaggerUi = require('swagger-ui-express');
 const app = express();
 const host = process.env.APP_HOST;
 const port = process.env.APP_PORT;
@@ -28,7 +29,7 @@ app.use(express.json());
 app.use(morgan('combined', { stream: logStream }));
 
 database();
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger));
 app.use(`/api/${api_version}`, routes());
 app.use(appErrorHandler);
 app.use(genericErrorHandler);
