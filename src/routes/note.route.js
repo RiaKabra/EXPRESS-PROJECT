@@ -3,7 +3,7 @@ import * as noteController from '../controllers/note.controller.js';
 import { noteValidator } from '../validators/note.validator.js';
 import {userAuth} from "../middlewares/auth.middleware.js";
 const router = express.Router();
-
+const redis = require('redis');
 router.get('',userAuth(process.env.secret_key),noteController.getAll);
 router.post('', noteValidator, userAuth(process.env.secret_key), noteController.createNote);
 router.post('/is_arch_unarch/:_id', userAuth(process.env.secret_key), noteController.toggleArchiveNote)

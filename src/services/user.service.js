@@ -32,7 +32,7 @@ export const loginUser = async (body)=>
       throw new Error("Invalid password");
     }
   } catch (error) {
-    throw new Error(`Error logging in: ${error.message}`);
+    throw new Error("Error logging in");
   }
 };
 
@@ -43,25 +43,53 @@ export const forget_pswd = async (body) => {
   if (!user) {
       throw new Error('User not found');
   }
-  console.log("SECRET KEY in user service -----",process.env.SECRET_KEY_NEW);
-  const token = jwt.sign({ email: user.email ,id:user._id}, process.env.SECRET_KEY_NEW);
-  await mailSender(user.email,token);
-  console.log('Token generated:', token);
-
+  const token = jwt.sign({ email: user.email, id: user._id }, process.env.SECRET_KEY_NEW);
+  await mailSender(user.email, token);
   return token;
 };
 
-export const reset_pswd = async (body) => {
+// export const reset_pswd = async (body, token) => {
+//   try {
+//     const decoded = jwt.verify(token, process.env.SECRET_KEY_NEW);
+//     const user = await User.findOne({ _id: decoded.id });
+//     if (!user) {
+//       throw new Error('User not found');
+//     }
+
+//     const hashedPassword = await bcrypt.hash(body.newPassword, 10);
+//     user.password = hashedPassword;
+//     await user.save();
+
+//     return { message: 'Password updated successfully' };
+//   } catch (error) {
+//     throw new Error('Invalid or expired token');
+//   }
+// };
+
+export const reset_pswd = async (body, token) => {
   try {
-    const user = await User.findOne({_id:body.UserID});
-  if (!user) {
-    throw new Error('User not found');
-  }
+    if (!token) {
+      throw new Error('Token not provided');
+    }
+
+    const decoded = jwt.verify(token, process.env.SECRET_KEY_NEW);
+    const user = await User.findOne({ _id: decoded.id });
+
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (!body.password || typeof body.password !== 'string') {
+      throw new Error('Invalid password format');
+    }
+
     const hashedPassword = await bcrypt.hash(body.password, 10);
     user.password = hashedPassword;
     await user.save();
-    return user;
+
+    return { message: 'Password updated successfully' };
   } catch (error) {
-    throw new Error(`Error resetting password: ${error.message}`);
+    console.error('Error in reset_pswd service:', error);
+    throw new Error('Password reset failed: ' + error.message);
   }
 };

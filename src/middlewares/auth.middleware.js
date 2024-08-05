@@ -33,7 +33,7 @@ export const userAuth = (secretKey) => {
   return async (req, res, next) => {
     try {
       let bearerToken = req.header('Authorization');
-      //console.log('bearerToken before splitting----->', bearerToken);
+      console.log('bearerToken before splitting----->', bearerToken);
 
       if (!bearerToken) {
         throw {
@@ -50,7 +50,10 @@ export const userAuth = (secretKey) => {
       req.body.UserID = userDetails.id;
       next();
     } catch (error) {
-      next(error);
-    }
-  };
+      return res.status(HttpStatus.BAD_REQUEST).json({
+        code: HttpStatus.BAD_REQUEST,
+        message: 'Invalid or expired token'
+        })
+  }
+}
 };
