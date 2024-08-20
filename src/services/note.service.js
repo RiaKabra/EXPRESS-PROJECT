@@ -1,6 +1,6 @@
 import Note from '../models/note.model';
 import clientRedis from '../utils/user.util';
-
+import { sendMessage } from '../utils/rabbitmq';
 export const getAll = async (value) => {
     const cacheKey = `notes:${value}`;
     const redisClient = await clientRedis(); 
@@ -17,9 +17,9 @@ export const getAll = async (value) => {
     return notes;
 };
 
-
 export const createNote = async (noteDetails) => {
   const data = await Note.create(noteDetails);
+  sendMessage('noteQueue', JSON.stringify({ action: 'create', data }));
   return data;
 };
 
